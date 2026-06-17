@@ -1128,9 +1128,10 @@ ul {
 .feature,
 .service-block,
 .contact-form {
-  background-color: #412CB7 !important;
+  background: linear-gradient(145deg, var(--color-resolution) 0%, var(--color-resolution) 55%, var(--color-bg-deep) 100%) !important;
   color: #FFFFFF !important;
-  border-color: transparent !important;
+  border-color: rgba(198, 208, 149, 0.15) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
 }
 
 .card:hover,
@@ -1138,7 +1139,9 @@ ul {
 .method-card:hover,
 .industry-item:hover,
 .feature:hover {
-  background-color: #352396 !important;
+  background: linear-gradient(145deg, #004ac9 0%, #004ac9 55%, #203a85 100%) !important;
+  border-color: rgba(198, 208, 149, 0.4) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18) !important;
 }
 
 .card h3,
@@ -1244,7 +1247,7 @@ ul {
 }
 
 .site-header.is-scrolled {
-  background: rgba(26, 47, 110, 0.95) !important;
+  background: rgba(0, 61, 165, 0.95) !important;
   backdrop-filter: blur(14px) !important;
   -webkit-backdrop-filter: blur(14px) !important;
   box-shadow: var(--shadow-soft) !important;
@@ -1272,4 +1275,13 @@ ul {
   mix-blend-mode: overlay;
   opacity: 0.25;
   pointer-events: none;
+}
+
+/* Align layout with header */
+.narrow {
+  max-width: var(--container-max) !important;
+}
+
+.section p {
+  text-align: justify;
 }
