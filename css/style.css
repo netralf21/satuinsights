@@ -1285,3 +1285,230 @@ ul {
 .section p {
   text-align: justify;
 }
+
+/* --- FUN & CLEAR REDESIGN --- */
+
+/* Intro Layout */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+.intro-grid p {
+  text-align: left !important;
+}
+.intro-left .lead {
+  font-size: clamp(2rem, 4vw, 2.8rem) !important;
+  line-height: 1.3 !important;
+  color: var(--color-navy) !important;
+  position: relative;
+  margin-top: 20px;
+}
+.intro-left .lead::before {
+  content: "“";
+  position: absolute;
+  top: -60px;
+  left: -20px;
+  font-size: 8rem;
+  color: rgba(198, 208, 149, 0.4);
+  font-family: serif;
+  z-index: -1;
+  line-height: 1;
+}
+
+/* Bento Grid */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+.bento-card {
+  border-radius: 32px !important;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease !important;
+}
+.bento-grid .card-2 {
+  margin-top: -30px; /* Stagger effect */
+}
+.bento-card:hover {
+  transform: translateY(-12px) rotate(-1.5deg) scale(1.02) !important;
+  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Feature Grid */
+.feature-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.feature-card {
+  border-radius: 28px !important;
+  padding: 3rem 2.5rem !important;
+  transition: transform 0.4s ease !important;
+}
+.feature-card:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+}
+.feature-icon {
+  background: var(--color-sage) !important;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-navy) !important;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 24px rgba(198, 208, 149, 0.5);
+}
+.feature-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Pill CTA */
+.pill-cta {
+  background: linear-gradient(145deg, var(--color-resolution) 0%, var(--color-bg-deep) 100%);
+  border-radius: 100px;
+  padding: 5rem 3rem;
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.pill-cta .lead {
+  color: #FFFFFF !important;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.pill-btn {
+  background-color: var(--color-sage) !important;
+  border-color: var(--color-sage) !important;
+  color: var(--color-navy) !important;
+  border-radius: 50px !important;
+  font-size: 1.15rem !important;
+  padding: 1.2rem 3rem !important;
+  box-shadow: 0 8px 24px rgba(198, 208, 149, 0.4) !important;
+}
+.pill-btn:hover {
+  background-color: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+  color: var(--color-resolution) !important;
+}
+
+/* --- PER-PAGE FUN ANIMATIONS --- */
+
+/* Services Page: Expand & Glow */
+.service-block {
+  border-radius: 40px 10px 40px 10px !important;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease !important;
+}
+.service-block:hover {
+  transform: scale(1.04) translateX(10px) !important;
+  box-shadow: 0 10px 40px rgba(198, 208, 149, 0.6), 0 0 0 2px var(--color-sage) !important;
+}
+
+/* About Page: Pop & Bounce */
+.card-grid-3 {
+  align-items: start;
+}
+.card-grid-3 .value-card:nth-child(2) {
+  margin-top: 40px; /* Staggered */
+}
+.value-card {
+  border-radius: 32px !important;
+  transition: transform 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6) !important;
+}
+.value-card:hover {
+  transform: translateY(-15px) rotate(3deg) scale(1.05) !important;
+  box-shadow: 0 20px 40px rgba(0, 61, 165, 0.2) !important;
+}
+.founder-photo img {
+  border-radius: 50% 32px 32px 32px !important;
+  transition: transform 0.5s ease !important;
+}
+.founder-block:hover .founder-photo img {
+  transform: scale(1.03) rotate(-2deg) !important;
+}
+
+/* Experience Page: Pill Cloud & 3D Tilt */
+.industry-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 1rem !important;
+  justify-content: center !important;
+}
+.industry-item {
+  flex: 1 1 auto;
+  max-width: fit-content;
+  background: rgba(198, 208, 149, 0.15) !important;
+  border-radius: 100px !important; /* Pill shape */
+  padding: 1.5rem 2.5rem !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  text-align: center;
+}
+.industry-item h3 {
+  margin-bottom: 0 !important;
+  font-size: 1.4rem !important;
+}
+.industry-item p {
+  display: none; /* Hide details for word cloud look */
+}
+.industry-item:hover {
+  background: var(--color-resolution) !important;
+  transform: scale(1.1) !important;
+  box-shadow: 0 10px 30px rgba(0, 61, 165, 0.3) !important;
+  padding: 1.5rem 3.5rem !important;
+}
+.industry-item:hover h3 {
+  color: #FFFFFF !important;
+}
+
+.methods-grid {
+  perspective: 1200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.method-card {
+  border-radius: 24px !important;
+  transition: transform 0.5s ease, box-shadow 0.5s ease !important;
+  transform-style: preserve-3d;
+}
+.method-card:hover {
+  transform: rotateX(10deg) rotateY(-5deg) translateY(-10px) !important;
+  box-shadow: -10px 20px 40px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Contact form */
+.contact-form {
+  border-radius: 32px !important;
+  transition: transform 0.4s ease !important;
+}
+.contact-form:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1) !important;
+}
+
+@media (max-width: 900px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+  .bento-grid .card-2 {
+    margin-top: 0;
+  }
+  .feature-bento-grid {
+    grid-template-columns: 1fr;
+  }
+  .pill-cta {
+    border-radius: 40px;
+    padding: 3.5rem 2rem;
+  }
+}
