@@ -360,7 +360,8 @@ ul {
 }
 
 /* Hero */
-.hero, .page-hero {
+.hero,
+.page-hero {
   min-height: calc(100vh - var(--header-height));
   display: flex;
   align-items: center;
@@ -964,7 +965,8 @@ ul {
     display: inline-block;
   }
 
-  .hero, .page-hero {
+  .hero,
+  .page-hero {
     padding: 2rem 0;
   }
 
@@ -1054,19 +1056,26 @@ ul {
 .white-bg-wrapper::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: url('../img/Picture1.png');
-  background-size: auto 110vh; /* Besar namun tidak memenuhi seluruh layar */
-  background-position: left center; /* Ditaruh di kiri, kemudian di-flip ke kanan */
+  background-size: auto 110vh;
+  /* Besar namun tidak memenuhi seluruh layar */
+  background-position: left center;
+  /* Ditaruh di kiri, kemudian di-flip ke kanan */
   background-repeat: no-repeat;
   background-attachment: fixed;
-  transform: scaleX(-1); /* Mirror secara horizontal */
-  opacity: 0.06; /* Sedikit dinaikkan karena sekarang hanya di kanan */
+  transform: scaleX(-1);
+  /* Mirror secara horizontal */
+  opacity: 0.06;
+  /* Sedikit dinaikkan karena sekarang hanya di kanan */
   pointer-events: none;
   z-index: 0;
 }
 
-.white-bg-wrapper > * {
+.white-bg-wrapper>* {
   position: relative;
   z-index: 1;
 }
@@ -1255,9 +1264,11 @@ ul {
   inset: 0;
   background-image: url('../img/Picture1.png');
   background-size: auto 110vh;
-  background-position: left center; /* Ditaruh di kiri lalu di-flip ke kanan */
+  background-position: left center;
+  /* Ditaruh di kiri lalu di-flip ke kanan */
   background-repeat: no-repeat;
-  transform: scaleX(-1); /* Mirror secara horizontal */
+  transform: scaleX(-1);
+  /* Mirror secara horizontal */
   mix-blend-mode: overlay;
   opacity: 0.25;
   pointer-events: none;
