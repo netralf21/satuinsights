@@ -1088,7 +1088,7 @@ p {
   background-size: auto 110vh;
   background-position: left center;
   background-repeat: no-repeat;
-  opacity: 0.06;
+  opacity: 0.1;
   pointer-events: none;
   z-index: 0;
 }
@@ -1287,6 +1287,7 @@ p {
   background-size: auto 110vh;
   background-position: left center;
   background-repeat: no-repeat;
+  opacity: 0.1;
   pointer-events: none;
 }
 
@@ -1643,8 +1644,13 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .white-bg-wrapper::before,
-  .ambient-bg::after {
-    opacity: 0.1 !important;
+  /* Center headline text on mobile/tablet */
+  .hero h1,
+  .page-hero h1,
+  .hero-sub,
+  .page-sub,
+  .intro-left .lead,
+  .intro-grid p {
+    text-align: center !important;
   }
 }
