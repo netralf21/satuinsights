@@ -391,7 +391,7 @@ ul {
 
 .hero-sub,
 .page-sub {
-  font-size: clamp(1.35rem, 3vw, 1.6rem);
+  font-size: clamp(1.6rem, 3.5vw, 1.9rem);
   font-weight: 400;
   max-width: 44ch;
   color: var(--color-text-muted);
@@ -604,19 +604,33 @@ p {
   margin-bottom: 0;
 }
 
+/* Story */
+.story-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .story-block {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Founder */
 .founder-block {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 3.5rem;
-  align-items: start;
+  align-items: center;
 }
 
 .founder-photo {
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1 / 1;
   background: rgba(198, 208, 149, 0.1);
   border: 2px solid rgba(198, 208, 149, 0.35);
-  border-radius: var(--radius);
+  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -936,7 +950,7 @@ p {
   }
 
   .founder-photo {
-    max-width: 280px;
+    max-width: 100%;
   }
 
   .contact-layout {
@@ -1069,7 +1083,7 @@ p {
 }
 
 .white-bg-wrapper {
-  background-color: #f7f7f8;
+  background-color: #FFFFFF;
   position: relative;
 }
 
@@ -1088,9 +1102,19 @@ p {
   background-size: auto 110vh;
   background-position: left center;
   background-repeat: no-repeat;
-  opacity: 0.1;
+  opacity: 1;
   pointer-events: none;
   z-index: 0;
+}
+
+.no-bg-image::before {
+  background-image: none !important;
+}
+
+@media (max-width: 991px) {
+  .white-bg-wrapper::before {
+    opacity: 0.1 !important;
+  }
 }
 
 .white-bg-wrapper>* {
@@ -1287,8 +1311,14 @@ p {
   background-size: auto 110vh;
   background-position: left center;
   background-repeat: no-repeat;
-  opacity: 0.1;
+  opacity: 1;
   pointer-events: none;
+}
+
+@media (max-width: 991px) {
+  .ambient-bg::after {
+    opacity: 0.1 !important;
+  }
 }
 
 /* Align layout with header */
@@ -1463,7 +1493,7 @@ p {
 }
 
 .founder-photo img {
-  border-radius: 50% 32px 32px 32px !important;
+  border-radius: 0 !important;
   transition: transform 0.5s ease !important;
 }
 
