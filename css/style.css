@@ -1642,6 +1642,13 @@ p {
   .feature-bento-grid {
     grid-template-columns: 1fr;
   }
+}
 
-
+@media (max-width: 768px) {
+  .white-bg-wrapper::before,
+  .ambient-bg::after {
+    background-size: 35% auto;
+    background-position: right bottom;
+    opacity: 0.02;
+  }
 }
