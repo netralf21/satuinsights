@@ -380,7 +380,7 @@ ul {
 
 .hero h1,
 .page-hero h1 {
-  font-size: clamp(2.75rem, 7vw, 4.5rem);
+  font-size: clamp(2.25rem, 6vw, 3.75rem);
   font-weight: 700;
   line-height: 1.05;
   letter-spacing: -0.01em;
@@ -1265,7 +1265,8 @@ p {
   color: #FFFFFF !important;
 }
 
-.service-block .bullet-list li::before {
+.service-block .bullet-list li::before,
+.white-bullets li::before {
   background: #FFFFFF !important;
 }
 
@@ -1601,6 +1602,37 @@ p {
   line-height: 1.6;
 }
 
+.corrigan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  border-top: 1px solid #d9d9d9;
+  margin-top: 1rem;
+}
+
+.corrigan-grid-item {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  border-bottom: 1px solid #d9d9d9;
+  background: transparent;
+  align-items: flex-start;
+}
+
+.corrigan-grid-item h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #101216;
+}
+
+.corrigan-grid-item p {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #101216;
+  line-height: 1.6;
+}
+
 /* Clove Layout - Our Services */
 .clove-grid {
   display: grid;
@@ -1666,12 +1698,32 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .corrigan-grid {
+    grid-template-columns: 1fr;
+  }
+
   .bento-grid .card-2 {
     margin-top: 0;
   }
 
   .feature-bento-grid {
     grid-template-columns: 1fr;
+  }
+
+  .market-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .market-col {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-right: 0 !important;
+    padding-bottom: 2rem;
+  }
+
+  .market-col:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
   }
 
   /* Center headline text on mobile/tablet */
