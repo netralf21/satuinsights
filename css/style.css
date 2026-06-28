@@ -380,7 +380,7 @@ ul {
 
 .hero h1,
 .page-hero h1 {
-  font-size: clamp(2.25rem, 6vw, 3.75rem);
+  font-size: clamp(2.2rem, 5.8vw, 3.65rem);
   font-weight: 700;
   line-height: 1.05;
   letter-spacing: -0.01em;
@@ -1433,7 +1433,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 0.75rem;
 }
 
 .pill-cta .lead {
@@ -1502,44 +1502,108 @@ p {
   transform: scale(1.03) rotate(-2deg) !important;
 }
 
-/* Experience Page: Pill Cloud & 3D Tilt */
+/* Experience Page: Split Layout - Icon + Text */
+.industry-split {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .industry-split {
+    flex-direction: row;
+    gap: 60px;
+    align-items: flex-start;
+  }
+}
+
+.industry-left {
+  flex: 0 0 38%;
+}
+
+.industry-left .section-title {
+  margin-bottom: 1.2rem;
+}
+
+.industry-left p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #101216;
+}
+
+.industry-right {
+  flex: 1;
+}
+
 .industry-grid {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 1rem !important;
-  justify-content: center !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 0 !important;
+}
+
+@media (min-width: 480px) {
+  .industry-grid {
+    grid-template-columns: 1fr 1fr !important;
+    column-gap: 30px !important;
+  }
 }
 
 .industry-item {
-  flex: 1 1 auto;
-  max-width: fit-content;
-  background: rgba(198, 208, 149, 0.15) !important;
-  border-radius: 100px !important;
-  /* Pill shape */
-  padding: 1.5rem 2.5rem !important;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-  text-align: center;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 14px !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 14px 0 !important;
+  box-shadow: none !important;
+  transition: none !important;
+  text-align: left !important;
+}
+
+.industry-item:hover {
+  background: transparent !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.industry-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  color: #292F7F;
+}
+
+.industry-icon svg {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
 }
 
 .industry-item h3 {
   margin-bottom: 0 !important;
-  font-size: 1.4rem !important;
+  font-size: 1rem !important;
+  color: #292F7F !important;
+  font-weight: 600 !important;
+  padding-bottom: 0 !important;
+  transition: transform 0.3s ease !important;
 }
 
 .industry-item p {
-  display: none;
-  /* Hide details for word cloud look */
-}
-
-.industry-item:hover {
-  background: var(--color-resolution) !important;
-  transform: scale(1.1) !important;
-  box-shadow: 0 10px 30px rgba(140, 167, 169, 0.3) !important;
-  padding: 1.5rem 3.5rem !important;
+  display: none !important;
 }
 
 .industry-item:hover h3 {
-  color: #FFFFFF !important;
+  color: #292F7F !important;
+  transform: translateX(5px) !important;
+}
+
+.industry-item:hover .industry-icon svg {
+  transform: scale(1.2) translateY(-2px) !important;
 }
 
 .methods-grid {
