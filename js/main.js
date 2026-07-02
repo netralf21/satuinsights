@@ -153,11 +153,11 @@
 
       bodyParts.push('', 'Message:', message);
 
-      var mailtoLink = 'mailto:jennifer@satuinsights.com?subject=' + subject + '&body=' + encodeURIComponent(bodyParts.join('\n'));
+      var mailtoLink = 'mailto:research@satuinsights.com?subject=' + subject + '&body=' + encodeURIComponent(bodyParts.join('\n'));
 
       window.location.href = mailtoLink;
 
-      formFeedback.textContent = 'Opening your email client. If it does not open, please email jennifer@satuinsights.com directly.';
+      formFeedback.textContent = 'Opening your email client. If it does not open, please email research@satuinsights.com directly.';
       formFeedback.classList.add('success');
     });
   }

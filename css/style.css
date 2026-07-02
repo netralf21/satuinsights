@@ -638,9 +638,6 @@ p {
   transition: transform var(--transition);
 }
 
-.founder-photo:hover {
-  transform: scale(1.02);
-}
 
 .photo-placeholder {
   font-size: 0.95rem;
@@ -922,7 +919,7 @@ p {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 0.6rem;
-  color: var(--color-sage);
+  color: #292F7F;
 }
 
 .footer-copy {
@@ -1154,7 +1151,10 @@ p {
   color: #412CB7;
 }
 
-.footer-tagline,
+.footer-tagline {
+  color: #292F7F !important;
+}
+
 .footer-copy {
   color: #101216 !important;
 }
@@ -1341,6 +1341,11 @@ p {
   align-items: start;
 }
 
+.intro-grid.about-intro {
+  grid-template-columns: 2.2fr 1fr;
+  gap: 3rem;
+}
+
 .intro-grid p {
   text-align: left !important;
 }
@@ -1498,9 +1503,6 @@ p {
   transition: transform 0.5s ease !important;
 }
 
-.founder-block:hover .founder-photo img {
-  transform: scale(1.03) rotate(-2deg) !important;
-}
 
 /* Experience Page: Split Layout - Icon + Text */
 .industry-split {
@@ -1636,7 +1638,7 @@ p {
 }
 
 .corrigan-list {
-  border-top: 1px solid #d9d9d9;
+  border-top: 1px solid #101216;
   margin-top: 1rem;
 }
 
@@ -1644,7 +1646,7 @@ p {
   display: flex;
   flex-direction: row;
   padding: 3rem 0;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid #101216;
   background: transparent;
   align-items: flex-start;
 }
@@ -1670,7 +1672,7 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  border-top: 1px solid #d9d9d9;
+  border-top: 1px solid #101216;
   margin-top: 1rem;
 }
 
@@ -1678,7 +1680,7 @@ p {
   display: flex;
   flex-direction: column;
   padding: 2rem 0;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid #101216;
   background: transparent;
   align-items: flex-start;
 }
@@ -1710,20 +1712,30 @@ p {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.clove-item:hover {
+  transform: translateY(-8px);
 }
 
 .clove-icon {
-  width: 80px;
-  height: auto;
+  width: 64px;
+  height: 64px;
   margin-bottom: 1.5rem;
-  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.clove-item:hover .clove-icon {
+  transform: scale(1.15);
 }
 
 .clove-item h3 {
   font-family: var(--font-family-serif, inherit);
   font-size: 1.75rem;
   margin-bottom: 1rem;
-  color: #101216;
+  color: #292F7F;
 }
 
 .clove-item p {
